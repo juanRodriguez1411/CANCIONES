@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar usuarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/stylefor.css">
+</head>
+<body>
+    <h1>Editar Personas</h1>
+    <form method="POST" action="{{ url_for('editar_usuario', idper=personas[0]) }}">
+
+        <label>Código:</label>
+        <input type="number" name="idper" value="{{ personas[0] }}" readonly><br>
+        <label>Nombre:</label>
+        <input type="text" name="nombreper" value="{{ personas[1] }}"><br>
+        <label>Apellido:</label>
+        <input type="text" name="apellidoper" value="{{ personas[2] }}"><br>
+        <label>Email:</label>
+        <input type="email" name="emailper" value="{{ personas[3] }}"><br>
+        <label>Dirección:</label>
+        <input type="text" name="direccionper" value="{{ personas[4] }}"><br>
+        <label>Teléfono:</label>
+        <input type="number" name="telefonoper" value="{{ personas[5] }}"><br>
+        <label>Usuario:</label>
+        <input type="text" name="usuarioper" value="{{ personas[6] }}"><br>
+        <label>Contraseña:</label>
+        <input type="password" name="contraper" value="{{ personas[7] }}"><br>
+        <label>Rol:</label>
+        <input type="text" name="rol" value="{{ personas[8] }}"><br>
+        <!-- Campo oculto para enviar el ID de la persona -->
+        <input type="hidden" name="idper" value="{{ personas[0] }}">
+        <input type="submit" value="Guardar cambios">
+    </form>
+</body>
+</html>

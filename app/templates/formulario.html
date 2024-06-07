@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../static/css/stylefor.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Iniciar sesión</h3>
+        <form class="formulario" method="post" action="/sesion">
+            <div class="form-group">
+                <label for="txtusuario">Nombre de Usuario:</label>
+                <input type="text" id="txtusuario" name="txtusuario" required>
+            </div>
+            <div class="form-group">
+                <label for="txtcontrasena">Contraseña:</label>
+                <input type="password" id="txtcontrasena" name="txtcontrasena" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+            {% if mensaje %}
+                <p>{{ mensaje }}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

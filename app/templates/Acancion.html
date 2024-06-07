@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Canciones</title>
+    <link rel="stylesheet" href="../static/css/acancion.css">
+
+</head>
+<body>
+    <h1>Agregar Canción</h1>
+    <form action="/agregarcancion" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="txttitulo">Título:</label>
+            <input type="text" id="txttitulo" name="txttitulo" placeholder="Título" required>
+        </div>
+        <div>
+            <label for="txtartista">Artista:</label>
+            <input type="text" id="txtartista" name="txtartista" placeholder="Artista" required>
+        </div>
+        <div>
+            <label for="txtgenero">Género musical:</label>
+            <input type="text" id="txtgenero" name="txtgenero" placeholder="Género" required>
+        </div>
+        <div>
+            <label for="txtduracion">Duración (segundos):</label>
+            <input type="number" id="txtduracion" name="txtduracion" placeholder="Duración" required>
+        </div>
+        <div>
+            <label for="txtprecio">Precio:</label>   
+            <input type="text" id="txtprecio" name="txtprecio" placeholder="Precio" required>
+        </div>
+        <div>
+            <label for="txtlanzamiento">Fecha de lanzamiento:</label>
+            <input type="date" id="txtlanzamiento" name="txtlanzamiento" placeholder="Lanzamiento" required>
+        </div>
+        <div>
+            <label for="txtimagen">Imagen de la canción:</label>
+            <input type="file" id="txtimagen" name="txtimagen" accept="image/*" required>
+        </div>
+        <button type="submit">Agregar Canción</button>
+    </form>
+</body>
+</html>

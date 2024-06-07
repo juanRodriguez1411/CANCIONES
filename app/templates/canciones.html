@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Canciones</title>
+    <link rel="stylesheet" href="../static/css/listcancion.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="/agregarcancion">Agregar Canción</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Bienvenido, {{ session['username'] }}</h1>
+        <p>¡Has iniciado sesión correctamente!</p>
+        <h1>Canciones</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Portada</th>
+                    <th>Título</th>
+                    <th>Artista</th>
+                    <th>Género</th>
+                    <th>Precio</th>
+                    <th>Duración</th>
+                    <th>Año de lanzamiento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cancion in canciones %}
+                <tr>
+                    <td><img src="data:image/jpeg;base64,{{ cancion.imagen }}" alt="Portada de la canción"></td>
+                    <td>{{ cancion.titulo }}</td>
+                    <td>{{ cancion.artista }}</td>
+                    <td>{{ cancion.genero }}</td>
+                    <td>{{ cancion.precio }}</td>
+                    <td>{{ cancion.duracion }}</td>
+                    <td>{{ cancion.lanzamiento }}</td>
+                    <td>
+                        <a href="/actualizar/{{ cancion.id }}" class="button editar">Editar</a>
+                        <form action="/eliminar/{{ cancion.id }}" method="post" style="display: inline;">
+                            <button type="submit" class="button eliminar">Eliminar</button>
+                        </form>
+                       
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

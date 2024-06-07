@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="../static/css/stylefor.css">
+</head>
+<body>
+    <h2>Registro de Usuario</h2>
+    <div class="container">
+        <form class="formulario" method="post" action="/Registrar">
+            <div class="form-group">        
+                <label for="nombre">Nombre:</label>
+                <input type="text" placeholder="Ingresar su nombre" required name="nombre">
+            </div> 
+            <div class="form-group">    
+                <label for="apellido">Apellido:</label>
+                <input type="text" placeholder="Ingrese su apellido" required name="apellido">
+            </div>
+            <div class="form-group"> 
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Ingrese su email" required name="email">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" placeholder="Ingrese su dirección" required name="direccion">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="number" placeholder="Ingrese su número de teléfono" required name="telefono">
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" placeholder="Ingrese su usuario" required name="usuario">
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" placeholder="Ingrese su contraseña" required name="Contraseña">
+            </div>
+            <div class="form-group">
+                <label for="rol">Rol usuarios:</label>
+                <select name="txtrol">
+                 <option value="Administrador">Administrador</option>
+                 <option value="Comprador">Comprador</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Registrarse">
+            </div> 
+             <a href="/sesion">INCIAR SESION</a> 
+        </form>
+    </div>
+
+</body>
+</html>
